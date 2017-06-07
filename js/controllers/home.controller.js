@@ -12,6 +12,7 @@
         $scope.filmfinder= filmfinder;
         $scope.genremaker= genremaker;
         $scope.newMovie= {};
+        $scope.detailView= detailView;
         activate();
 
         ////////////////
@@ -37,7 +38,7 @@
         })
     }
     function detailView(movie){
-        console.log(movie);
+        console.log(movie); 
         $scope.newMovie = movie;
     }
     }
