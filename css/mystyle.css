@@ -67,7 +67,9 @@ nav {
     margin-left: 23px;
     color: #fff;
     font-size: 0.9em;
-    display:inline; 
+    display:inline-block; 
+    list-style-type: none;
+
 }
 
 .myform {
