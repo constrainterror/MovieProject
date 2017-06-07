@@ -72,7 +72,7 @@
              })
          }
     function searchFilmss(buscapeli){
-             PeliculasHttp.searchFilms(buscapeli)
+             filmshttp.searchFilms(buscapeli)
              .then(function(movies){
                  console.log(movies);
                  $scope.movies = movies;
