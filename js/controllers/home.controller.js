@@ -72,7 +72,6 @@
     function searchFilmss(buscapeli){
              filmshttp.searchFilms(buscapeli)
              .then(function(movies){
-                 console.log(movies);
                  $scope.movies = movies;
              })
          }
