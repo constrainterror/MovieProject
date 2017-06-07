@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="PELIS">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/libs/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/libs/angular/angular-csp.css">
+    <link rel="stylesheet" href="/css/mystyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+    </style>
+    <title>PelisEOI</title>
+</head>
+<body <ng-cloack>
+    <div ng-view></div>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/libs/angular/angular.js"></script>
+    <script src="/libs/angular/angular-route.min.js"></script>
+    <script src="/js/apps.js"></script>
+    <script src="/js/factories/films.http.js"></script>
+    <!--script src="/js/factories/films.factory.js"></script--> 
+    <script src='/js/controllers/home.controller.js'></script>
+
+</body>
+</html>

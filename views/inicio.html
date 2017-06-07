@@ -1,0 +1,71 @@
+<nav>
+    <div class="container">
+        <div class="row navigation">
+            <div class="col-xs-2">
+                <a href="#"><img src="img/logopeliseoi.png" width=100%></a>
+            </div>
+            <div class="col-xs-6 navlinks"> 
+                <a href="#">Categorías</a>
+                <a href="#">Mejor Valoradas</a>
+                <a href="#">Populares ahora</a>
+                <a href="#">Próximamente</a>
+                </div>
+            <!-- barra de busqueda con font-awesome -->
+            <div class="col-xs-offset-1 col-xs-3">
+                <div class="input-group">
+                    <!--icono fontawesome -->
+                    <span class="input-group-addon myform noborder"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <!--form -->
+                    <input type="text" class="form-control myform noborder" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">                    </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+            <!--aqui van las movidas de  la sidebar -->
+            <div class="row">
+                <div class="col-xs-3 iconito">
+                    <a href="#"><img src="img/refineicon.png" width=100%/></a>
+                </div>
+                <div class="col-xs-3 filtrar"> <a href="#">Filtrar</a> </div>
+                <div class="col-xs-offset-3 text-right"> <a href="#">Borrar</a> </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 foto">
+                    <!--aqui va la imagen de los años y eso --><img src="img/sidebar.PNG" width=100% /> </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 botones">
+                    <!--aqui van los botones -->
+                    <p>Géneros:</p>
+                    
+                        <div class="col-xs-6 nopadding">
+                            <button type="button" class="btn btn-default genero" ng-repeat="genre in genres track by $index">{{genre.name}}</button>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9">
+            <div class="row">
+                <div class="col-xs-6 text-left">
+                    <p>107,875 películas encontradas</p>
+                </div>
+                <div class="col-xs-6 text-right"> <a href="#">ordenar</a> </div>
+            </div>
+            <!-- aqui van las fotos alineadas -->
+            <div class="row posters">
+                
+                <div class="col-xs-4 cartelpeli" ng-repeat="movie in movies track by $index">  
+                    <img  ng-src="{{img + movie.poster_path}}" width='269px' height='403px' data-toggle="modal" data-target="#gabsmodal">
+                   <div class="valoraciones">
+                   </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+<div  ng-include="'views/modal.html'"></div>
