@@ -6,17 +6,19 @@
             </div>
             <div class="col-xs-6 navlinks"> 
                 <ul>
+                <div class="pointer">
                 <li>Categorías</li>
                 <li ng-click="topRatedd()">Mejor Valoradas</li>
                 <li ng-click="Popular()">Populares ahora</li>
                 <li ng-click="Release()">Próximamente</li>
+                </div>
                 </ul>
                 </div>
             <!-- barra de busqueda con font-awesome -->
             <div class="col-xs-offset-1 col-xs-3">
                 <div class="input-group">
                     <!--icono fontawesome -->
-                    <span ng-click="searchFilmss(buscapeli)" class="input-group-addon myform noborder"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <span ng-click="searchFilmss(buscapeli)" class="input-group-addon myform noborder pointer"><i class="fa fa-search" aria-hidden="true"></i></span>
                     <!--form -->
                     <input placeholder="Buscar..." ng-model="buscapeli" type="text" class="form-control myform noborder" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
                 </div>
