@@ -16,9 +16,9 @@
             <div class="col-xs-offset-1 col-xs-3">
                 <div class="input-group">
                     <!--icono fontawesome -->
-                    <span class="input-group-addon myform noborder"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <span ng-click="searchFilmss(buscapeli)" class="input-group-addon myform noborder"><i class="fa fa-search" aria-hidden="true"></i></span>
                     <!--form -->
-                    <input type="text" class="form-control myform noborder" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
+                    <input placeholder="Buscar..." ng-model="buscapeli" type="text" class="form-control myform noborder" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
                 </div>
             </div>
         </div>

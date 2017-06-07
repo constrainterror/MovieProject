@@ -17,6 +17,7 @@
         $scope.topRatedd= topRatedd;
         $scope.Popular= Popular;
         $scope.Release= Release;
+        $scope.searchFilmss= searchFilmss;
         activate();
 
         ////////////////
@@ -68,6 +69,13 @@
              .then(function(movies){
                  $scope.movies = movies;
                  console.log("hey");
+             })
+         }
+    function searchFilmss(buscapeli){
+             PeliculasHttp.searchFilms(buscapeli)
+             .then(function(movies){
+                 console.log(movies);
+                 $scope.movies = movies;
              })
          }
     }
