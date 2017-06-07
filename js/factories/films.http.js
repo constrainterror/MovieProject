@@ -40,7 +40,7 @@
              })
          }
          function topRated(){
-            return $http.get(staticUrl+'/discover/movie?'+apiKey+'&language=es-ES&sort_by=popularity.desc&page=1')
+            return $http.get(staticUrl+'/discover/movie?'+APIKey+'&language=es-ES&sort_by=popularity.desc&page=1')
             .then(function(response){
                 return response.data.results;
             })
