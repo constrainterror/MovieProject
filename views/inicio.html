@@ -60,7 +60,7 @@
             <div class="row posters">
                 
                 <div class="col-xs-4 cartelpeli" ng-repeat="movie in movies track by $index">  
-                    <img  ng-src="{{img + movie.poster_path}}" width='269px' height='403px' data-toggle="modal" data-target="#gabsmodal">
+                    <img ng-click="detailView(movie)" ng-src="{{img + movie.poster_path}}" width='269px' height='403px' data-toggle="modal" data-target="#gabsmodal">
                    <div class="valoraciones">
                    </div>
                 </div>
