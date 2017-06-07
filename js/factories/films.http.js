@@ -36,6 +36,7 @@
               return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=popularity.desc&page=1'+genre+genreId)
              .then(function(response){
                  return response.data.results;
+             })
          }
     }
 })();
