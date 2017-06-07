@@ -40,11 +40,9 @@
                 
                     <!--aqui van los botones -->
                     <p>Géneros:</p>
-                    
-                            <button type="button" class="col-xs-6 btn btn-default genero" ng-repeat="genre in genres track by $index">{{genre.name}}</button>
-    
-                        
-                    
+                        <div class="col-xs-6 genero"ng-repeat="genre in genres track by $index">
+                            <button type="button" class="btn btn-default">{{genre.name}}</button>
+                        </div>
                 </div>
             </div>
         </div>
