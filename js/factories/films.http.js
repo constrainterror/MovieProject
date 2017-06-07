@@ -9,11 +9,14 @@
     function filmshttp($http) {
         var service = {
             searchMovie:searchMovie,
-            movieGenre:movieGenre
+            movieGenre:movieGenre,
+            genrefilter:genrefilter
         };
         
         var staticUrl='https://api.themoviedb.org/3';
-        var APIkey='api_key=c2b981b82300ca00fbdde242818c45c7'
+        var APIkey='api_key=c2b981b82300ca00fbdde242818c45c7';
+        var genre='&with_genres='
+
         return service;
 
         ////////////////
@@ -28,6 +31,11 @@
              .then(function(response){
                  return response.data.genres;
              })
+         }
+         function genrefilter(genreId){
+              return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=popularity.desc&page=1'+genre+genreId)
+             .then(function(response){
+                 return response.data.results;
          }
     }
 })();

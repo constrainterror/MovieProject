@@ -13,6 +13,7 @@
         $scope.genremaker= genremaker;
         $scope.newMovie= {};
         $scope.detailView= detailView;
+        $scope.GenreFilter= GenreFilter;
         activate();
 
         ////////////////
@@ -22,8 +23,6 @@
             genremaker();
 
         }
-    
-
     function filmfinder(){
         filmshttp.searchMovie()
         .then(function(movies){
@@ -40,6 +39,12 @@
     function detailView(movie){
         console.log(movie); 
         $scope.newMovie = movie;
+    }
+    function GenreFilter(genreId){
+        filmshttp.genrefilter(genreId)
+        .then(function(movies){
+            $scope.movies = movies;
+        })
     }
     }
 })();

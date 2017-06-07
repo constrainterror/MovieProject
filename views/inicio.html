@@ -41,7 +41,7 @@
                     <!--aqui van los botones -->
                     <p>Géneros:</p>
                         <div class="col-xs-6 nopadding">
-                            <button type="button" class="btn btn-default" ng-repeat="genre in genres track by $index">{{genre.name}}</button>
+                            <button ng-click="GenreFilter(genre.id)" type="button" class="btn btn-default" ng-repeat="genre in genres track by $index">{{genre.name}}</button>
                         </div>
             </div>
                 
