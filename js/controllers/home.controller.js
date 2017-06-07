@@ -14,6 +14,7 @@
         $scope.newMovie= {};
         $scope.detailView= detailView;
         $scope.GenreFilter= GenreFilter;
+        $scope.topRatedd= topRatedd;
         activate();
 
         ////////////////
@@ -46,5 +47,11 @@
             $scope.movies = movies;
         })
     }
+    function topRatedd(){
+             PeliculasHttp. topRated()
+             .then(function(movies){
+                 $scope.movies = movies;
+             })
+         }
     }
 })();
