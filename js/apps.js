@@ -10,7 +10,7 @@
                 .when("/", {
 
                 controller: 'homeController',
-                templateUrl: '/views/inicio.html'
+                templateUrl: 'views/inicio.html'
             })
                 .otherwise({redirectTo : "/"});     
     }
