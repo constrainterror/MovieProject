@@ -40,6 +40,12 @@
              })
          }
          function topRated(){
+            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=vote_average.desc&page=1')
+            .then(function(response){
+                return response.data.results;
+            })
+        }
+         function popular(){
             return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=popularity.desc&page=1')
             .then(function(response){
                 return response.data.results;

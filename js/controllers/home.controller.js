@@ -54,5 +54,12 @@
                  console.log("hey");
              })
          }
+     function Popular(){
+             filmshttp.popular()
+             .then(function(movies){
+                 $scope.movies = movies;
+                 console.log("hey");
+             })
+         }
     }
 })();
