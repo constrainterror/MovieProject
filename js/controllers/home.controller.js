@@ -37,6 +37,7 @@
         })
     }
     function detailView(movie){
+        console.log(movie);
         $scope.newMovie = movie;
     }
     }
