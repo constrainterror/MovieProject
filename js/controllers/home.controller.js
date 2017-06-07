@@ -51,6 +51,7 @@
              PeliculasHttp. topRated()
              .then(function(movies){
                  $scope.movies = movies;
+                 console.log("hey");
              })
          }
     }
