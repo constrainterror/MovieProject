@@ -13,7 +13,8 @@
             genrefilter:genrefilter,
             topRated:topRated,
             popular:popular,
-            release:release
+            release:release,
+            searchFilms:searchFilms
         };
         
         var staticUrl='https://api.themoviedb.org/3';
@@ -55,6 +56,12 @@
         }
         function release(){
             return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=release_date.desc&page=1')
+            .then(function(response){
+                return response.data.results;
+            })
+        }
+        function searchFilms(buscapeli){
+            return $http.get(staticUrl+'/search/movie?'+APIkey+'&query='+buscapeli+'&page=1')
             .then(function(response){
                 return response.data.results;
             })
