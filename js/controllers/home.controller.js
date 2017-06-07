@@ -15,6 +15,8 @@
         $scope.detailView= detailView;
         $scope.GenreFilter= GenreFilter;
         $scope.topRatedd= topRatedd;
+        $scope.Popular= Popular;
+        $scope.Release= Release;
         activate();
 
         ////////////////
@@ -56,6 +58,13 @@
          }
      function Popular(){
              filmshttp.popular()
+             .then(function(movies){
+                 $scope.movies = movies;
+                 console.log("hey");
+             })
+         }
+    function Release(){
+             filmshttp.release()
              .then(function(movies){
                  $scope.movies = movies;
                  console.log("hey");

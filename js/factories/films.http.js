@@ -11,7 +11,9 @@
             searchMovie:searchMovie,
             movieGenre:movieGenre,
             genrefilter:genrefilter,
-            topRated:topRated
+            topRated:topRated,
+            popular:popular,
+            release:release
         };
         
         var staticUrl='https://api.themoviedb.org/3';
@@ -47,6 +49,12 @@
         }
          function popular(){
             return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=popularity.desc&page=1')
+            .then(function(response){
+                return response.data.results;
+            })
+        }
+        function release(){
+            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=release_date.desc&page=1')
             .then(function(response){
                 return response.data.results;
             })
