@@ -48,7 +48,7 @@
         })
     }
     function topRatedd(){
-             filmshttp. topRated()
+             filmshttp.topRated()
              .then(function(movies){
                  $scope.movies = movies;
                  console.log("hey");
