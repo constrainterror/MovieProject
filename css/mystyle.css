@@ -44,7 +44,6 @@ nav {
 
 .genero {
     width: 90%;
-    margin:5% 0 0 5%;
     padding: 2% 0 2% 0; 
 }
 
@@ -64,7 +63,7 @@ nav {
     margin-top: 15px;
 }
 
-.navlinks a {
+.navlinks li {
     margin-left: 23px;
     color: #fff;
     font-size: 0.9em;
