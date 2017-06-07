@@ -24,7 +24,7 @@
             });
          }
          function movieGenre(){
-             return $http.get(staticUrl+'/genre/movie/list?'+APIkey+'&language=es-ES')
+             return $http.get(staticUrl+'/genre/movie/list?'+APIkey+'&language=en-US')
              .then(function(response){
                  return response.data.genres;
              })
