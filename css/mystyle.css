@@ -4,6 +4,14 @@ nav {
     color: #fff;
 }
 
+.navlinks li{
+    cursor: pointer;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
 .cartelpeli {
     padding: 2%
 
