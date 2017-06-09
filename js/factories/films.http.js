@@ -14,7 +14,8 @@
             topRated:topRated,
             popular:popular,
             release:release,
-            searchFilms:searchFilms
+            searchFilms:searchFilms,
+            totalResults:totalResults
         };
         
         var staticUrl='https://api.themoviedb.org/3';
@@ -25,7 +26,7 @@
 
         ////////////////
         function searchMovie() {
-            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=popularity.desc&page=1')
+            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=es-ES&sort_by=popularity.desc&page=1')
             .then(function(response){
                 return response.data.results;
             });
@@ -37,25 +38,25 @@
              })
          }
          function genrefilter(genreId){
-              return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=popularity.desc&page=1'+genre+genreId)
+              return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=es-ES&sort_by=popularity.desc&page=1'+genre+genreId)
              .then(function(response){
                  return response.data.results;
              })
          }
          function topRated(){
-            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=vote_average.desc&page=1')
+            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=es-ES&sort_by=vote_average.desc&page=1')
             .then(function(response){
                 return response.data.results;
             })
         }
          function popular(){
-            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=popularity.desc&page=1')
+            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=es-ES&sort_by=popularity.desc&page=1')
             .then(function(response){
                 return response.data.results;
             })
         }
         function release(){
-            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=en-US&sort_by=release_date.desc&page=1')
+            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=es-ES&sort_by=release_date.desc&page=1')
             .then(function(response){
                 return response.data.results;
             })
@@ -66,6 +67,11 @@
                 return response.data.results;
             })
         }
-
+        function totalResults(){
+            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=es-ES&sort_by=popularity.desc&page=1')
+            .then(function(response){
+                return response.data.total_results;
+            })
+        }
     }
 })();

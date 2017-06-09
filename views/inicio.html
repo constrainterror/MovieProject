@@ -6,14 +6,14 @@
             </div>
             <div class="col-xs-6 navlinks"> 
                 <ul>
-                <li>Categorías</li>
-                <li ng-click="topRatedd()">Mejor Valoradas</li>
-                <li ng-click="Popular()">Populares ahora</li>
-                <li ng-click="Release()">Próximamente</li>
-                </div>
+                    <!--li>Categorías</li-->
+                    <li ng-click="topRatedd()">Mejor Valoradas</li>
+                    <li ng-click="Popular()">Populares ahora</li>
+                    <li ng-click="Release()">Próximamente</li>
                 </ul>
-                </div>
+            </div>
             <!-- barra de busqueda con font-awesome -->
+
             <div class="col-xs-offset-1 col-xs-3">
                 <div class="input-group pointer">
                     <!--icono fontawesome -->
@@ -22,30 +22,25 @@
                     <input placeholder="Buscar..." ng-model="buscapeli" type="text" class="form-control myform noborder" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
                 </div>
             </div>
-        </div>
+        </div>  
     </div>
+    
 </nav>
 <div class="container">
-    <div class="row">
+    <div class="row paddingtop">
         <div class="col-xs-3">
             <!--aqui van las movidas de  la sidebar -->
-            <div class="row">
-                <div class="col-xs-3 iconito">
-                    <a href="#"><img src="img/refineicon.png" width=100%/></a>
-                </div>
-                <div class="col-xs-3 filtrar"> <a href="#">Filtrar</a> </div>
-                <div class="col-xs-offset-3 text-right"> <a href="#">Borrar</a> </div>
-            </div>
-            <div class="row">
+                
+            <div class="row paddingtop">
                 <div class="col-xs-12 foto">
-                    <!--aqui va la imagen de los años y eso --><img src="img/sidebar.PNG" width=100% /> </div>
+                    <!--aqui va la imagen de los años y eso --><img src="img/slider2.png" width=100%> </div>
             </div>
             <div class="row">
                 
                     <!--aqui van los botones -->
                     <p>Géneros:</p>
-                        <div class="col-xs-6 nopadding">
-                            <button ng-click="GenreFilter(genre.id)" type="button" class="btn btn-default" ng-repeat="genre in genres track by $index">{{genre.name}}</button>
+                        <div class="col-xs-6 nopadding genrebutton" ng-repeat="genre in genres track by $index">
+                            <button ng-click="GenreFilter(genre.id)" type="button" class="btn btn-default" >{{genre.name}}</button>
                         </div>
             </div>
                 
@@ -54,9 +49,8 @@
         <div class="col-xs-9">
             <div class="row">
                 <div class="col-xs-6 text-left">
-                    <p>107,875 películas encontradas</p>
+                    <p>{{movies.length}} de {{amountresults}} películas encontradas</p>
                 </div>
-                <div class="col-xs-6 text-right"> <a href="#">ordenar</a> </div>
             </div>
             <!-- aqui van las fotos alineadas -->
             <div class="row posters">

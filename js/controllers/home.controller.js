@@ -18,6 +18,8 @@
         $scope.Popular= Popular;
         $scope.Release= Release;
         $scope.searchFilmss= searchFilmss;
+        $scope.totalresults= totalresults;
+        $scope.amountresults= {};
         activate();
 
         ////////////////
@@ -25,6 +27,7 @@
         function activate() { 
             filmfinder();
             genremaker();
+            totalresults();
 
         }
     function filmfinder(){
@@ -41,7 +44,6 @@
         })
     }
     function detailView(movie){
-        console.log(movie); 
         $scope.newMovie = movie;
     }
     function GenreFilter(genreId){
@@ -71,8 +73,14 @@
          }
     function searchFilmss(buscapeli){
              filmshttp.searchFilms(buscapeli)
-             .then(function(movies){t
+             .then(function(movies){
                  $scope.movies = movies;
+             })
+         }
+    function totalresults(){
+             filmshttp.totalResults()
+             .then(function(response){
+                 $scope.amountresults = response;
              })
          }
     }

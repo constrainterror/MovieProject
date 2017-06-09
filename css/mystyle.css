@@ -6,10 +6,23 @@ nav {
 
 .navlinks li{
     cursor: pointer;
+    font-family: 'NunitoSans', sans-serif;
+    font-weight: 400; 
+    font-size: 18px;
 }
 
 .pointer{
     cursor: pointer;
+}
+
+.text-left p{
+    font-family: 'NunitoSans', sans-serif;
+    font-weight: 400; 
+    font-size: 10px;
+    color:#a4a8ac;
+}
+.paddingtop{
+    margin-top: 2%;
 }
 
 .cartelpeli {
@@ -30,7 +43,7 @@ nav {
 }
 
 .posters{
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'NunitoSans', sans-serif;
     font-weight: 400; 
     font-size: 14px;
     color:#fff;
@@ -63,7 +76,7 @@ nav {
 
 .nopadding {
     padding: 0;
-    margin-left: 0px;
+  
 
 }
 
@@ -86,8 +99,11 @@ nav {
     opacity: 0.5;
 }
 
-.botones button {
+.genrebutton button {
     font-size: 0.8em;
+    width:100px;
+    border: 1px solid #2883d8;
+
 }
 
 .noborder {
@@ -109,5 +125,39 @@ nav {
 
 .modalcontainer {
     background-color: #fff;
+}
+
+#modaltitle{
+    font-family: 'NunitoSans', sans-serif;
+    font-weight: 400; 
+    font-size: 30px;
+    color:#000;
+    margin-left: 2%
+}
+
+#modaldate{
+
+    font-family: 'NunitoSans', sans-serif;
+    font-weight: 400; 
+    font-size: 15px;
+    color:#a4a8ac;
+    margin-left: 2%
+}
+
+.modaloverview{
+
+    font-family: 'NunitoSans', sans-serif;
+    font-weight: 400; 
+    font-size: 10,87px;
+    color:#a4a8ac;font-family: 'NunitoSans', sans-serif;
+    font-weight: 400; 
+    font-size: 10,87px;
+    color:#a4a8ac;
+    margin-top: 11%;
+}
+
+#modalposter{
+    margin-left: 2%;
+    margin-bottom: 5%;
 }
 
