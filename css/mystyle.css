@@ -105,7 +105,13 @@ nav {
     border: 1px solid #2883d8;
 
 }
+.margintop15{
+     padding-top: 10%;
+ }
 
+.margintop3{
+    margin-top:3%;
+}
 .noborder {
     border: none;
 }
@@ -122,6 +128,16 @@ nav {
 .title {
     text-align:left;
 }
+
+.myslider {
+    backgound-color
+}
+
+
+
+
+
+
 
 .modalcontainer {
     background-color: #fff;
@@ -160,4 +176,5 @@ nav {
     margin-left: 2%;
     margin-bottom: 5%;
 }
+
 

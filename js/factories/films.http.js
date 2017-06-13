@@ -15,7 +15,8 @@
             popular:popular,
             release:release,
             searchFilms:searchFilms,
-            totalResults:totalResults
+            totalResults:totalResults,
+            releaseSlider:releaseSlider
         };
         
         var staticUrl='https://api.themoviedb.org/3';
@@ -71,6 +72,21 @@
             return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=es-ES&sort_by=popularity.desc&page=1')
             .then(function(response){
                 return response.data.total_results;
+            })
+        }
+
+         function year() {
+            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=es-ES&sort_by=popularity.desc&page=1')
+            .then(function(response){
+                return response.data.results;
+            });
+        }
+
+        function releaseSlider(minimumYear, maximumYear){
+            console.log(' Voy a buscar las pelis entre el año ' + minimumYear  + ' y '  + maximumYear);
+            return $http.get(staticUrl+'/discover/movie?'+APIkey+'&language=es-ES&sort_by=primary_release_date.asc&page=1&primary_release_date.gte='+minimumYear+'&primary_release_date.lte='+maximumYear)
+            .then(function(response){
+                return response.data.results;
             })
         }
     }

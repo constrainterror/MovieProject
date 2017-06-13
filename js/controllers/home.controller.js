@@ -17,9 +17,21 @@
         $scope.topRatedd= topRatedd;
         $scope.Popular= Popular;
         $scope.Release= Release;
+        $scope.ReleaseSlider = ReleaseSlider;
         $scope.searchFilmss= searchFilmss;
         $scope.totalresults= totalresults;
         $scope.amountresults= {};
+       
+        $scope.slider = {
+            minValue: 1895,
+            maxValue: 2050,
+            options: {
+                floor: 1960,
+                ceil: 2000,
+                step: 1,
+                noSwitching: true
+            }
+        };
         activate();
 
         ////////////////
@@ -77,11 +89,20 @@
                  $scope.movies = movies;
              })
          }
-    function totalresults(){
-             filmshttp.totalResults()
-             .then(function(response){
-                 $scope.amountresults = response;
-             })
-         }
+        
+        function totalresults(){
+                filmshttp.totalResults()
+                .then(function(response){
+                    $scope.amountresults = response;
+                })
+        }
+    
+        function ReleaseSlider(){
+            filmshttp.releaseSlider($scope.slider.minValue, $scope.slider.maxValue )
+            .then(function(movies){
+                $scope.movies = movies;
+
+            })
+        }
     }
 })();

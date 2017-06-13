@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('PELIS', ['ngRoute']).config(config);
+    angular.module('PELIS', ['ngRoute','rzModule']).config(config);
     config.$inject = ['$routeProvider', '$locationProvider'];
     function config($routeProvider, $locationProvider) {
         
